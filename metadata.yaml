@@ -1,10 +1,10 @@
-name: __NAME__
-cloud: __CLOUD__          # aws | google | common
+name: terraform-aws-step-function
+cloud: aws          # aws | google | common
 tier: capability          # primitive | capability | blueprint
 maturity: experimental    # experimental | stable | deprecated
-description: __DESCRIPTION__
+description: Step Functions state machine with full logging, X-Ray tracing and an execution role scoped to the Lambda functions it invokes
 owners: [platform]
 upstream: null            # e.g. "terraform-aws-modules/s3-bucket/aws 5.17.0"
 pairs_with: null          # e.g. "terraform-google-gcs-bucket"
-registry_name: __NAME__
+registry_name: terraform-aws-step-function
 deprecated: null          # { removal: YYYY-MM-DD, replacement: <repo> }

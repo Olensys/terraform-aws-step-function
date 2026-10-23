@@ -1,6 +1,6 @@
-# __NAME__
+# terraform-aws-step-function
 
-__DESCRIPTION__
+Step Functions state machine with full logging, X-Ray tracing and an execution role scoped to the Lambda functions it invokes
 
 ## Opinions
 
@@ -10,7 +10,7 @@ __DESCRIPTION__
 
 ```hcl
 module "this" {
-  source = "git::https://github.com/Olensys/__NAME__.git?ref=v1.0.0"
+  source = "git::https://github.com/Olensys/terraform-aws-step-function.git?ref=v1.0.0"
 
   name = "example"
   context = {
