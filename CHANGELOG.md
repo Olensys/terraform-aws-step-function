@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/Olensys/terraform-aws-step-function/compare/v1.0.1...v1.0.2) (2026-10-24)
+
+
+### Bug Fixes
+
+* **examples:** unique application slug so concurrent integration runs do not collide ([#2](https://github.com/Olensys/terraform-aws-step-function/issues/2)) ([72177df](https://github.com/Olensys/terraform-aws-step-function/commit/72177df5e16ce2726d85b7e51c531b587ba777be))
+
 ## [1.0.1](https://github.com/Olensys/terraform-aws-step-function/compare/v1.0.0...v1.0.1) (2026-10-24)
 
 
