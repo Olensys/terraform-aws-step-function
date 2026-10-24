@@ -11,23 +11,23 @@ Step Functions state machine with full logging, X-Ray tracing and an execution r
 ## Usage
 
 ```hcl
-module "this" {
-  source = "git::https://github.com/Olensys/terraform-aws-step-function.git?ref=v1.0.0"
+module "naming" {
+  source  = "git::https://github.com/Olensys/terraform-null-naming.git?ref=v1.0.1"
+  context = var.context
+}
 
-  name = "example"
-  context = {
-    organization = "olensys"
-    environment  = "dev"
-    application  = "example"
-    owner        = "platform"
-    cost_center  = "eng"
-  }
+module "step_function" {
+  source  = "git::https://github.com/Olensys/terraform-aws-step-function.git?ref=v1.0.0"
+  name    = module.naming.name
+  context = var.context
 
   definition_json = jsonencode({
     StartAt = "Hello"
     States  = { Hello = { Type = "Pass", End = true } }
   })
   lambda_arns = ["arn:aws:lambda:eu-west-1:123456789012:function:worker"]
+
+  tags = module.naming.tags
 }
 ```
 
