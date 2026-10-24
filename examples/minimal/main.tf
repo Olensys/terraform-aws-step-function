@@ -14,7 +14,7 @@ locals {
   context = {
     organization = "olensys"
     environment  = "test"
-    application  = "example"
+    application  = "sfn"
     owner        = "platform"
     cost_center  = "eng"
   }
